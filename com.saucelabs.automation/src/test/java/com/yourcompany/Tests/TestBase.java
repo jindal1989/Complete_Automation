@@ -26,11 +26,11 @@ import java.rmi.UnexpectedException;
  */
 public class TestBase  {
 
-    public String buildTag = System.getenv("BUILD_TAG");
+    //public String buildTag = System.getenv("BUILD_TAG");
 
-    public String username = System.getenv("SAUCE_USERNAME");
+    public String username = "ashu_garg";
 
-    public String accesskey = System.getenv("SAUCE_ACCESS_KEY");
+    public String accesskey = "7c1d53e4-8f5e-4359-99eb-1644ae9f2fcb";
 
     /**
      * ThreadLocal variable which contains the  {@link WebDriver} instance which is used to perform browser interactions with.
@@ -97,9 +97,9 @@ public class TestBase  {
         capabilities.setCapability(CapabilityType.PLATFORM, os);
         capabilities.setCapability("name", methodName);
 
-        if (buildTag != null) {
+       /* if (buildTag != null) {
             capabilities.setCapability("build", buildTag);
-        }
+        }*/
 
         // Launch remote browser and set it as the current thread
         webDriver.set(new RemoteWebDriver(
