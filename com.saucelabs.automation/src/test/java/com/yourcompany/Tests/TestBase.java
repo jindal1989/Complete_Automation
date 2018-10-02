@@ -108,6 +108,7 @@ public class TestBase  {
 
         // set current sessionId
         String id = ((RemoteWebDriver) getWebDriver()).getSessionId().toString();
+        System.out.println("Session id:"+id);
         sessionId.set(id);
     }
 
